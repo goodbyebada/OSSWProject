@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#BA55D3"
+    android:layout_width="350dp"
+    android:layout_height="200dp"
+    android:layout_gravity = "center"
+    >
+
+
+    <TextView
+        android:id="@+id/choiceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:paddingTop="60dp"
+        android:text="정답을 확인하시겠어요?"
+        android:textColor="#fff"
+        android:textSize="25dp"
+
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="350sp"
+        android:layout_height="50sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yesTV"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:hint="Y"
+            android:paddingStart="10sp"
+            android:paddingLeft="10sp"
+            android:textColor="#fff"
+            android:textColorHint="#BA55D3"
+            android:textSize="20sp" />
+
+
+        <Button
+            android:id="@+id/noTV"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="10sp"
+            android:hint="N"
+            android:paddingStart="10sp"
+            android:paddingLeft="10sp"
+            android:textColor="#fff"
+            android:textColorHint="#BA55D3"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
