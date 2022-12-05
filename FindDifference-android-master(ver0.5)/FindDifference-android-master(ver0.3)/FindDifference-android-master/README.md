@@ -15,5 +15,6 @@
 - `login`-게임 시작하기에 앞서 이름을 받을 수 있도록 설계하였다.
 <img src="https://user-images.githubusercontent.com/114564687/205753037-b12c21d2-3d89-4fca-a66a-2bed94386857.png" width="200" height="400"/>
 - `Gamestart`-이름으로 로그인을 하면 게임시작 버튼이 나오는 것을 알수 있다.
+<img src="https://user-images.githubusercontent.com/114564687/205756063-3dd9fea5-5422-4bcd-8093-840fe4f16c0c.png" width="200" height="400"/>
 ![스크린샷(33)](https://user-images.githubusercontent.com/114564687/205756063-3dd9fea5-5422-4bcd-8093-840fe4f16c0c.png)
 
