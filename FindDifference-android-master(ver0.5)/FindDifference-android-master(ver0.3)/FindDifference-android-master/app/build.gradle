@@ -1,4 +1,8 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
+plugins{
+    id 'com.android.application'
+//    id 'kotlin-kapt'
+}
 
 android {
     compileSdkVersion 28

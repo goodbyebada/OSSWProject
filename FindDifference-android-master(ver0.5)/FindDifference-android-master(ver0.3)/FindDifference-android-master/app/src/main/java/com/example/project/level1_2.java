@@ -42,6 +42,8 @@ public class level1_2 extends AppCompatActivity {
         public int remain=30;
 
 
+
+
         public MyView(Context context) {
             super(context);
         }

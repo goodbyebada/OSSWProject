@@ -28,6 +28,9 @@ public class level1_1 extends AppCompatActivity {
     protected int width, height;
     protected int x,y;
     private String userid;
+
+
+
     protected class MyView extends View {
         int j=0;
         int[] checkCnt=new int[] {0,0,0,0,0};
@@ -37,6 +40,8 @@ public class level1_1 extends AppCompatActivity {
         public int cntCrt=0, cntWrg=0;
         public int totalcntCrt=0, totalcntWrg =0;
                 public int remain=30;
+        //
+
 
         public MyView(Context context) {
             super(context);
