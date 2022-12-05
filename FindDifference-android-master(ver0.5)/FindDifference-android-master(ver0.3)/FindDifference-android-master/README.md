@@ -1,7 +1,7 @@
 <p align="center">
-  <a href="#게임 시작하기">Getting started</a> •
-  <a href="#게임 과정">How To Use</a> •
-  <a href="#게임 끝">Community</a> •
+  <a href="#게임 시작하기">게임 시작하기</a> •
+  <a href="#게임 과정">게임 과정</a> •
+  <a href="#게임 끝">게임 끝</a> •
 
 </p>
 
