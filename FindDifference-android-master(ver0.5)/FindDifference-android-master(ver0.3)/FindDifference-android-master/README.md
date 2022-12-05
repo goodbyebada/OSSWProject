@@ -14,7 +14,7 @@
 - `Level` - :게임 시작 버튼을 누리면 단계를 설정 할 수 있다. 이때 level1, level2, level3 를 선택 할 수 있다.
 <img src="https://user-images.githubusercontent.com/114564687/205758403-2730706f-0e68-405c-aa9f-9be287ee975b.png" width="200" heigt="400"/>
 
-- `MotionLayoutCarousel` -https://github.com/faob-dev/MotionLayoutCarousel 에서 우리는 UI 오픈소스를 사용하였다. 
+- `MotionLayoutCarousel` -<a href="https://github.com/faob-dev/MotionLayoutCarousel"> 이곳에서 우리는 UI 오픈소스를 사용하였다. 
 
 ## 게임 과정
 
@@ -31,7 +31,7 @@
 <img src="https://user-images.githubusercontent.com/114564687/205763073-f03d7629-0f1c-4c21-945e-63a720041b18.png" width="200" heigt="400"/>
 
 - `Result` - 팝업창 클릭시 결과 창과 함께 컨페티 UI가 나온다.
-- `Konfetti` -<a href="https://github.com/DanielMartinus/Konfetti"> 에서 우리는 UI 오픈소스를 사용하였다. 
+- `Konfetti` -<a href="https://github.com/DanielMartinus/Konfetti"> 이곳에서 우리는 UI 오픈소스를 사용하였다. 
 
 ## License
 
