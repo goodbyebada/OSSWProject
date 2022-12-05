@@ -1,7 +1,7 @@
 <p align="center">
   <a href="#게임 시작하기">게임 시작하기</a> •
   <a href="#게임 과정">게임 과정</a> •
-  <a href="#게임 끝">게임 끝</a> •
+  <a href="#게임 끝">게임 끝</a> 
 
 </p>
 
@@ -33,3 +33,7 @@
 
 - `Notification` - 게임을 다 끝내면 화면이 시작화면으로 돌아가며 위의 팝업창이 뜨게 설정하였다.
 
+<img src="https://user-images.githubusercontent.com/114564687/205763073-f03d7629-0f1c-4c21-945e-63a720041b18.png" width="200" heigt="400"/>
+
+- `Result` - 팝업창 클릭시 결과 창과 함께 컨페티 UI가 나온다.
+- `Konfetti` -https://github.com/DanielMartinus/Konfetti 에서 우리는 UI 오픈소스를 사용하였다. 
