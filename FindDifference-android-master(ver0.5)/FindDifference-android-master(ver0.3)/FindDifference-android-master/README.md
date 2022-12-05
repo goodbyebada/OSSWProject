@@ -1,9 +1,4 @@
-<p align="center">
-  <a href="#게임 시작하기">게임 시작하기</a> •
-  <a href="#게임 과정">게임 과정</a> •
-  <a href="#게임 끝">게임 끝</a> 
 
-</p>
 
 <p align="center">
   <strong> 오픈소스 프로젝트: 틀린그림 찾기</a></strong>
@@ -36,4 +31,8 @@
 <img src="https://user-images.githubusercontent.com/114564687/205763073-f03d7629-0f1c-4c21-945e-63a720041b18.png" width="200" heigt="400"/>
 
 - `Result` - 팝업창 클릭시 결과 창과 함께 컨페티 UI가 나온다.
-- `Konfetti` -https://github.com/DanielMartinus/Konfetti 에서 우리는 UI 오픈소스를 사용하였다. 
+- `Konfetti` -<a href h="https://github.com/DanielMartinus/Konfetti"> 에서 우리는 UI 오픈소스를 사용하였다. 
+
+## License
+
+이 프로젝트는 UI와 기본 틀린그림찾기를 바탕으로 제작되었습니다.
