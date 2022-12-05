@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#게임 시작하기">게임 시작하기</a> •
-  <a href="#usage">How To Use</a> ••
+  <a href="#게임 과정">How To Use</a> •
   <a href="#게임 끝">게임 끝</a> 
 
 </p>
@@ -21,7 +21,7 @@
 
 - `MotionLayoutCarousel` -https://github.com/faob-dev/MotionLayoutCarousel 에서 우리는 UI 오픈소스를 사용하였다. 
 
-## How To Use:
+## 게임 과정:
 
 <img src="https://user-images.githubusercontent.com/114564687/205761095-b5255ca7-6a97-4c4b-937f-25528b0e2b2e.png" width="200" heigt="400"/>
 
