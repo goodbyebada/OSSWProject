@@ -67,7 +67,7 @@ public class level1_1 extends AppCompatActivity {
             //paint.setColor(Color.BLUE);
             paint.setTextSize(50);
             paint.setStrokeWidth(10);
-//            paint.setStyle(Paint.Style.FILL);
+            paint.setStyle(Paint.Style.FILL);
 //            canvas.drawText("맞은개수: " + cntCrt, 100, 50, paint);
 //            paint.setColor(Color.RED);
 //            canvas.drawText("틀린개수: " + cntWrg, 450, 50, paint);
