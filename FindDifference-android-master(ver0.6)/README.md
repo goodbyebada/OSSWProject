@@ -37,3 +37,4 @@
 
 
 이 프로젝트는 UI와 기본 틀린그림찾기를 바탕으로 제작되었습니다.
+[라이선스](https://github.com/goodbyebada/OSSWProject/tree/main/LICENSE)
