@@ -12,5 +12,5 @@
 </p>
   
 ## Getting started:
-![스크린샷(31)](https://user-images.githubusercontent.com/114564687/205753037-b12c21d2-3d89-4fca-a66a-2bed94386857.png)
+![스크린샷(32)](https://user-images.githubusercontent.com/114564687/205754961-eb710383-f077-4206-ad8d-84b1264f574f.png)
 
