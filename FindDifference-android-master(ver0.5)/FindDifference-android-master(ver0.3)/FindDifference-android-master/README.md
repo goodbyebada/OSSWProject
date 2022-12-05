@@ -9,4 +9,10 @@
 
 <p align="center">
   <strong> 오픈소스 프로젝트: 틀린그림 찾기</a></strong>
-  </p>
+</p>
+  
+## Getting started:
+<p align="center">
+  ![스크린샷(31)](https://user-images.githubusercontent.com/114564687/205753037-b12c21d2-3d89-4fca-a66a-2bed94386857.png)
+</p>
+```
