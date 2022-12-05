@@ -1,10 +1,8 @@
 <p align="center">
-  <a href="#getting-started">Getting started</a> •
-  <a href="#usage">How To Use</a> •
-  <a href="#community">Community</a> •
-  <a href="#contribute">Contribute</a> •
-  <a href="#report-an-issue">Report issue</a> •
-  <a href="#license">License</a>
+  <a href="#게임 시작하기">Getting started</a> •
+  <a href="#게임 과정">How To Use</a> •
+  <a href="#게임 끝">Community</a> •
+
 </p>
 
 <p align="center">
@@ -27,4 +25,11 @@
 
 <img src="https://user-images.githubusercontent.com/114564687/205761095-b5255ca7-6a97-4c4b-937f-25528b0e2b2e.png" width="200" heigt="400"/>
 
+- `Playing` - :틀린그림 찾기 과정에서 위와 아래 사진에서 틀린 것을 찾아야 한다.
+
+## 게임 끝:
+
+<img src="https://user-images.githubusercontent.com/114564687/205761807-65ce1602-c34e-4be7-bcfe-bef7d6bf3454.png" width="200" heigt="400"/>
+
+- `Notification` - 게임을 다 끝내면 화면이 시작화면으로 돌아가며 위의 팝업창이 뜨게 설정하였다.
 
