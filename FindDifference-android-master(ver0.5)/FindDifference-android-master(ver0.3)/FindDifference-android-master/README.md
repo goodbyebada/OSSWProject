@@ -25,4 +25,6 @@
 
 ## 게임 과정:
 
+<img src="https://user-images.githubusercontent.com/114564687/205761095-b5255ca7-6a97-4c4b-937f-25528b0e2b2e.png" width="200" heigt="400"/>
+
 
