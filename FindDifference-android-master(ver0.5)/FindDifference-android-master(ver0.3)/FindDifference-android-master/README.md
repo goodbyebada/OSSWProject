@@ -9,7 +9,7 @@
   <strong> 오픈소스 프로젝트: 틀린그림 찾기</a></strong>
 </p>
   
-## 게임 시작하기:
+## 게임 시작하기
 - `Login` - 게임 시작하기에 앞서 이름을 받을 수 있도록 설계하였다.
 <img src="https://user-images.githubusercontent.com/114564687/205753037-b12c21d2-3d89-4fca-a66a-2bed94386857.png" width="200" height="400"/>
 
@@ -21,13 +21,13 @@
 
 - `MotionLayoutCarousel` -https://github.com/faob-dev/MotionLayoutCarousel 에서 우리는 UI 오픈소스를 사용하였다. 
 
-## 게임 과정:
+## 게임 과정
 
 <img src="https://user-images.githubusercontent.com/114564687/205761095-b5255ca7-6a97-4c4b-937f-25528b0e2b2e.png" width="200" heigt="400"/>
 
 - `Playing` - :틀린그림 찾기 과정에서 위와 아래 사진에서 틀린 것을 찾아야 한다.
 
-## 게임 끝:
+## 게임 끝
 
 <img src="https://user-images.githubusercontent.com/114564687/205761807-65ce1602-c34e-4be7-bcfe-bef7d6bf3454.png" width="200" heigt="400"/>
 
