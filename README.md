@@ -36,4 +36,4 @@
 ## License
 
 이 프로젝트는 UI와 기본 틀린그림찾기를 바탕으로 제작되었습니다.
-[라이선스] <a href="https://github.com/goodbyebada/OSSWProject/blob/main/LICENSE">
+[라이선스] - <a href="https://github.com/goodbyebada/OSSWProject/blob/main/LICENSE">
