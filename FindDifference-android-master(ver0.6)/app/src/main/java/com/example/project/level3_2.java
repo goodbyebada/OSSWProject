@@ -250,7 +250,7 @@ public class level3_2 extends AppCompatActivity {
                     if(cntCrt==8){
                         sendNotification();
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        intent.putExtra("totalcntCrt",totalcntCrt);
+                        intent.putExtra("stotalcntCrt",totalcntCrt);
                         intent.putExtra("totalcntWrg",totalcntWrg);
                         intent.putExtra("userid",userid);
 
