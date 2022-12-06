@@ -260,4 +260,11 @@ public class level1_1 extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        timer.cancel();
+        timer = null;
+    }
 }
