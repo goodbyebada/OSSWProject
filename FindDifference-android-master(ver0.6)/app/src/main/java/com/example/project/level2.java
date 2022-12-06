@@ -25,12 +25,22 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class level2 extends AppCompatActivity {
 
     int r = 20;
     int width;
     int height;
     private String userid;
+
+
+    int time = 30;
+    Timer timer;
+    Context mContext;
+
+
 
     protected class MyView extends View {
 
@@ -272,6 +282,34 @@ public class level2 extends AppCompatActivity {
         Log.e("width", width+"");
         MyView w = new MyView(this);
         setContentView(w);
+
+
+
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                time--;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setTitle("틀린그림 찾기 #남은시간: "+time);
+                    }
+                });
+                if(time <= 0){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            setTitle("틀린그림 찾기");
+                            Toast.makeText(mContext,"시간 끝!", Toast.LENGTH_SHORT).show();
+                            timer.cancel();
+                        }
+                    });
+                }
+            }
+        };
+        timer = new Timer();
+        timer.schedule(tt,0,1000L);
+
     }
 
     //옵션메뉴
