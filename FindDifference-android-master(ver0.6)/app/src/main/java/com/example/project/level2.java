@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.media.RingtoneManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Menu;
@@ -39,6 +40,7 @@ public class level2 extends AppCompatActivity {
     int time = 30;
     Timer timer;
     Context mContext;
+    Handler handler = new Handler();
 
 
 
@@ -70,7 +72,7 @@ public class level2 extends AppCompatActivity {
                 if(x < x1 || x2 < x) return false;
                 if(y < y2 || y1 < y) return false;
                 if(checked){
-                    Toast.makeText(getApplicationContext(), "중복입니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "중복입니다 다시 체크해주세요", Toast.LENGTH_SHORT).show();
                     return false;
                 }
                 checked = true;
@@ -222,9 +224,11 @@ public class level2 extends AppCompatActivity {
 
                     if(correct) {
                         cntCrt++;
+                        Toast.makeText(getApplicationContext(), "정답입니다!", Toast.LENGTH_SHORT).show();
                     }
                     else {
                         cntWrg++;
+                        Toast.makeText(getApplicationContext(), "오답입니다", Toast.LENGTH_SHORT).show();
                     }
                     cntTotal++;
 
@@ -239,12 +243,25 @@ public class level2 extends AppCompatActivity {
                     if(next) {
                         // 다 맞았을 때의 행동
 //                        Log.e("Yes", index + "");
-                        index++;
 
-                        if(index == answers.length) {
+                        if(index == answers.length-1) {
                             // 마지막 사진까지 왔을 때
                             sendNotification();
-                            finish();
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    finish();
+                                }
+                            }, 1000); //딜레이 타임 조절
+                        }
+                        else {
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    index++;
+                                    invalidate();
+                                }
+                            }, 1000); //딜레이 타임 조절
                         }
                     }
 
