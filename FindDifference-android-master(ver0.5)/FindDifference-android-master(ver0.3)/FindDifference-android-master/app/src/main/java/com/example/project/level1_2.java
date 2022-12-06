@@ -204,6 +204,7 @@ public class level1_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         MyView w = new MyView(this);
         setContentView(w);
         Intent intent = getIntent();
