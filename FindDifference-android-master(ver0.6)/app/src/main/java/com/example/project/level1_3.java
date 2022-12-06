@@ -225,10 +225,7 @@ public class level1_3 extends AppCompatActivity {
                         finish();
                     }
                     if(remain==0){
-                        Toast.makeText(getApplicationContext(), "횟수 초과! 다시 시작.", Toast.LENGTH_LONG).show();
-                        Intent intent = getIntent();
                         finish();
-                        startActivity(intent);
                     }
                     remain--;
                     //Toast.makeText(getApplicationContext(), x+ " "+y, Toast.LENGTH_LONG).show();
