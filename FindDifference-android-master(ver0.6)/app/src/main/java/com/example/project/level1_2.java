@@ -16,6 +16,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.media.RingtoneManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -40,7 +41,7 @@ public class level1_2 extends AppCompatActivity {
 
     int time;
     Timer timer;
-//    Context mContext;
+    Context mContext;
 
 
 
@@ -203,6 +204,7 @@ public class level1_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         MyView w = new MyView(this);
         setContentView(w);
         Intent intent = getIntent();
@@ -211,15 +213,18 @@ public class level1_2 extends AppCompatActivity {
         userid = intent.getStringExtra("userid");
         remain = intent.getIntExtra("remain", remain)-1;
         time = intent.getIntExtra("time",0);
+//        Log.e("Time", time+"");
 
 
         TimerTask tt = new TimerTask() {
             @Override
             public void run() {
                 time--;
+//                Log.e("Time", time+"");
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+//                        Log.e("Time", time+"");
                         setTitle("틀린그림 찾기 #남은시간: "+time);
                     }
                 });

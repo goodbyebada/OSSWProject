@@ -36,7 +36,7 @@ public class level1_1 extends AppCompatActivity {
 
     int time = 50;
     Timer timer;
-//    Context mContext;
+    Context mContext;
 
 
 
@@ -177,7 +177,9 @@ public class level1_1 extends AppCompatActivity {
                         intent.putExtra("totalcntWrg",totalcntWrg);
                         intent.putExtra("userid",userid);
                         intent.putExtra("remain", remain);
+                        intent.putExtra("time",time);
                         startActivity(intent);
+                        finish();
                     }
                     if(remain == 0){
                         Toast.makeText(getApplicationContext(), "횟수 초과! 다시 시작.", Toast.LENGTH_LONG).show();
@@ -200,6 +202,7 @@ public class level1_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         Intent intent = getIntent();
         userid = intent.getStringExtra("userid");
         MyView w = new MyView(this);
@@ -221,7 +224,7 @@ public class level1_1 extends AppCompatActivity {
                         @Override
                         public void run() {
                             setTitle("틀린그림 찾기");
-                            Toast.makeText(getApplicationContext(),"시간 끝!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext,"시간 끝!", Toast.LENGTH_SHORT).show();
                             timer.cancel();
                         }
                     });
