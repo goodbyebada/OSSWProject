@@ -285,8 +285,12 @@ public class level3_1 extends AppCompatActivity {
                             setTitle("틀린그림 찾기");
                             Toast.makeText(mContext,"시간 끝!", Toast.LENGTH_SHORT).show();
                             timer.cancel();
+
                         }
                     });
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         };
