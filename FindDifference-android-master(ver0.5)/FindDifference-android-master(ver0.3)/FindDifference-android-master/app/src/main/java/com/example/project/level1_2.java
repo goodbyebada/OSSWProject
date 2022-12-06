@@ -26,12 +26,20 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class level1_2 extends AppCompatActivity {
     protected int totalcntCrt, totalcntWrg;
 
     protected int width, height;
     protected int x,y;
     private String userid;
+
+    Context mContext;
+    Timer timer;
+    int time;
+
     protected class MyView extends View {
         int j=0;
         int[] checkCnt=new int[] {0,0,0,0,0};
@@ -202,6 +210,33 @@ public class level1_2 extends AppCompatActivity {
         totalcntCrt = intent.getIntExtra("totalcntCrt",-1);
         totalcntWrg = intent.getIntExtra("totalcntWrg",-1);
         userid = intent.getStringExtra("userid");
+        time = intent.getIntExtra("time",0);
+
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                time--;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setTitle("틀린그림 찾기 #남은시간: "+time);
+                    }
+                });
+                if(time <= 0){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            setTitle("틀린그림 찾기");
+                            Toast.makeText(mContext,"시간 끝!", Toast.LENGTH_SHORT).show();
+                            timer.cancel();
+                        }
+                    });
+                }
+            }
+        };
+        timer = new Timer();
+        timer.schedule(tt,0,1000L);
+
     }
 
     //옵션메뉴
