@@ -24,10 +24,19 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class level1_1 extends AppCompatActivity {
     protected int width, height;
     protected int x,y;
     private String userid;
+
+
+    int time = 30;
+    Timer timer;
+    Context mContext;
+
     protected class MyView extends View {
         int j=0;
         int[] checkCnt=new int[] {0,0,0,0,0};
@@ -37,6 +46,8 @@ public class level1_1 extends AppCompatActivity {
         public int cntCrt=0, cntWrg=0;
         public int totalcntCrt=0, totalcntWrg =0;
                 public int remain=30;
+        //
+
 
         public MyView(Context context) {
             super(context);
@@ -163,6 +174,7 @@ public class level1_1 extends AppCompatActivity {
                         intent.putExtra("totalcntCrt",totalcntCrt);
                         intent.putExtra("totalcntWrg",totalcntWrg);
                         intent.putExtra("userid",userid);
+                        intent.putExtra("time", time);
                         startActivity(intent);
                     }
                     if(cntCrt+cntWrg>=30){
@@ -186,10 +198,37 @@ public class level1_1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         Intent intent = getIntent();
         userid = intent.getStringExtra("userid");
         MyView w = new MyView(this);
         setContentView(w);
+
+
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                time--;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setTitle("틀린그림 찾기 #남은시간: "+time);
+                    }
+                });
+                if(time <= 0){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            setTitle("틀린그림 찾기");
+                            Toast.makeText(mContext,"시간 끝!", Toast.LENGTH_SHORT).show();
+                            timer.cancel();
+                        }
+                    });
+                }
+            }
+        };
+        timer = new Timer();
+        timer.schedule(tt,0,1000L);
     }
 
     //옵션메뉴

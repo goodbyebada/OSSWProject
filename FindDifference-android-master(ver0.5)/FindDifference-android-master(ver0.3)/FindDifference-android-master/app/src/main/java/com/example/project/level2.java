@@ -21,11 +21,20 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
+import pl.kitek.timertextview.TimerTextView;
+
 public class level2 extends AppCompatActivity {
+
+    Context mContext;
+
+    int time = 30;
+    Timer timer;
 
     int r = 20;
     int width;
@@ -49,13 +58,18 @@ public class level2 extends AppCompatActivity {
                 this.x2 = (int)(x2 * Xratio);
                 this.y2 = (int)(y2 * Yratio);
             }
+//
+//            void debug(){
+//                xA = (x1+x2)/2;
+//                yA = (y1+y2)/2;
+//                checked = true;
+//            }
 
-            void debug(){
-                xA = (x1+x2)/2;
-                yA = (y1+y2)/2;
-                checked = true;
-            }
-
+//            booelan outRange(int x, int y){
+//
+//                if ( )
+//            }
+//
             boolean checkRange(int x, int y){
                 if(x < x1 || x2 < x) return false;
                 if(y < y2 || y1 < y) return false;
@@ -212,9 +226,11 @@ public class level2 extends AppCompatActivity {
 
                     if(correct) {
                         cntCrt++;
+                        Toast.makeText(getApplicationContext(), "정답입니다!", Toast.LENGTH_SHORT).show();
                     }
                     else {
                         cntWrg++;
+                        Toast.makeText(getApplicationContext(), "오답입니다", Toast.LENGTH_SHORT).show();
                     }
                     cntTotal++;
 
@@ -251,6 +267,8 @@ public class level2 extends AppCompatActivity {
                     String msg = "터치를 입력받음 : " +x+" / " +y;
                     Toast. makeText(MainActivity. this, msg, Toast.LENGTH_SHORT ).show();
                     */
+
+
                 case MotionEvent.ACTION_MOVE:
                 case MotionEvent.ACTION_UP:
             }
@@ -260,6 +278,7 @@ public class level2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         Intent intent = getIntent();
         userid = intent.getStringExtra("userid");
         TypedValue tv = new TypedValue();
@@ -272,6 +291,31 @@ public class level2 extends AppCompatActivity {
         Log.e("width", width+"");
         MyView w = new MyView(this);
         setContentView(w);
+
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                time--;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setTitle("틀린그림 찾기 #남은시간: "+time);
+                    }
+                });
+                if(time <= 0){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            setTitle("틀린그림 찾기");
+                            Toast.makeText(mContext,"시간 끝!", Toast.LENGTH_SHORT).show();
+                            timer.cancel();
+                        }
+                    });
+                }
+            }
+        };
+        timer = new Timer();
+        timer.schedule(tt,0,1000L);
     }
 
     //옵션메뉴
