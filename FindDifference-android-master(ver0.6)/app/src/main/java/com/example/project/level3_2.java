@@ -25,11 +25,21 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class level3_2 extends AppCompatActivity {
     protected int width, height;
     protected int x,y;
     private String userid;
     private int remain;
+
+
+
+    int time ;
+    Timer timer;
+    Context mContext;
+
 
 
     protected class MyView extends View {
@@ -245,6 +255,7 @@ public class level3_2 extends AppCompatActivity {
                         intent.putExtra("userid",userid);
 
                         startActivity(intent);
+                        finish();
                     }
                     if(remain == 0){
                         Toast.makeText(getApplicationContext(), "횟수 초과! 다시 시작.", Toast.LENGTH_LONG).show();
@@ -267,11 +278,40 @@ public class level3_2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         Intent intent = getIntent();
         userid = intent.getStringExtra("userid");
         remain = intent.getIntExtra("remain", remain)-1;
+        time = intent.getIntExtra("time",0);
         MyView w = new MyView(this);
         setContentView(w);
+
+
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                time--;
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setTitle("틀린그림 찾기 #남은시간: "+time);
+                    }
+                });
+                if(time <= 0){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            setTitle("틀린그림 찾기");
+                            Toast.makeText(mContext,"시간 끝!", Toast.LENGTH_SHORT).show();
+                            timer.cancel();
+                        }
+                    });
+                }
+            }
+        };
+        timer = new Timer();
+        timer.schedule(tt,0,1000L);
+
     }
 
     //옵션메뉴

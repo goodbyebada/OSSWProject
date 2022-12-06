@@ -180,7 +180,9 @@ public class level1_2 extends AppCompatActivity {
                         intent.putExtra("totalcntWrg",totalcntWrg);
                         intent.putExtra("userid",userid);
                         intent.putExtra("remain", remain);
+                        intent.putExtra("time",time);
                         startActivity(intent);
+                        finish();
 
                     }
                     if(remain == 0){
