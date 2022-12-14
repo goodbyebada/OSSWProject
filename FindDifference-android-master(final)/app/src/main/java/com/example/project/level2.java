@@ -322,10 +322,12 @@ public class level2 extends AppCompatActivity {
 
                         }
                     });
+
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
+
             }
         };
         timer = new Timer();
