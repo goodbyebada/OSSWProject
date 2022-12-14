@@ -270,6 +270,9 @@ public class level1_3 extends AppCompatActivity {
                             timer.cancel();
                         }
                     });
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         };

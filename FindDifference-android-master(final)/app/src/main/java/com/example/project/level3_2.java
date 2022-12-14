@@ -303,6 +303,9 @@ public class level3_2 extends AppCompatActivity {
                             timer.cancel();
                         }
                     });
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         };
